@@ -18,9 +18,9 @@ signedData = pycades.SignedData()
 signedData.ContentEncoding = pycades.CADESCOM_BASE64_TO_BINARY
 signedData.Content = base64_str
 signature = signedData.SignCades(signer, pycades.CADESCOM_CADES_BES, True)
-
+final_signature = ''.join(signature.splitlines())
 print("--Signature--")
-print(signature)
+print(final_signature)
 print("----")
 
 _signedData = pycades.SignedData()
